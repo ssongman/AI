@@ -1,4 +1,6 @@
 import tensorflow as tf
-hello = tf.constant('Hello World!')
-sess = tf.Session()
-print(sess.run(hello))
+with tf.compat.v1.Session() as sess:
+  hello = tf.constant('Hello World!')
+  print(sess.run(hello))
+sess.close()
+
